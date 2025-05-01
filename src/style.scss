@@ -1,0 +1,242 @@
+// colors.scss or _variables.scss
+
+// Primary Colors
+$primary-color: #39245F; // Fresh Green
+$secondary-color: #ffc107; // Warm Yellow-Orange
+
+// Text Colors
+$text-light: #ffffff; // White
+$text-dark: #333333; // Dark Gray
+
+// Overlay & Backgrounds
+$overlay-dark: rgba(0, 0, 0, 0.5); // Semi-transparent Black
+
+// Carousel Indicators
+$indicator-active: #000000; // Black
+$indicator-inactive: #ffffff; // White
+
+// Additional Utilities (if you want)
+$body-bg: #f8f9fa; // Light Gray for body background
+
+header {
+    height: 100dvh;
+
+    nav {
+        height: 10dvh;
+        position: sticky;
+        top: 0;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        background-color: white;
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    #heroCarousel {
+        height: 90dvh;
+        width: 100%;
+
+        .carousel-inner {
+            height: 100%;
+
+            .carousel-item {
+                height: 100%;
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color:rgba(0, 0, 0, 0.123);
+                    border-radius: inherit;
+                }
+
+                .carousel-caption {
+                    padding-left: 12rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    p:first-child {
+                        background: $secondary-color;
+                        padding: 0.3rem 0.5rem;
+                        color: white;
+                    }
+
+                    h1 {
+                        font-size: 3.5rem;
+                        font-weight: 600;
+                        color: $primary-color;
+                        text-align: start;
+
+                    }
+                    p{
+                        text-align:start;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .carousel-indicators {
+            bottom: 20px;
+
+            button {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0.6;
+                border: none;
+                margin: 0 6px;
+                transition: all 0.3s;
+
+                &.active {
+                    background-color: $primary-color;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .btn-purple {
+        background-color: $primary-color;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        text-decoration: none;
+    }
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+    background-color: #ccc !important;
+    opacity: 1;
+}
+
+/* Active Dot */
+.swiper-pagination-bullet-active {
+    background-color: rgba(255, 255, 255, 0.671) !important;
+}
+
+/* Optional: Size of the bullets */
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+}
+
+/* Optional: Navigation arrows color */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+}
+
+section.top-products .container {
+    .swiper {
+        background-color: #4B2F72;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.74);
+        border-radius: 10px;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                padding: 1.5rem 0;
+                .box {
+                    background-color: #4B2F72;
+                    width: 250px;
+                    height: 300px;
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        top: 0.3rem;
+                        left: 0.3rem;
+                        z-index: 10;
+
+                        p {
+                            width: fit-content;
+                            margin: 0.5rem;
+                            background-color: #DC2626;
+                            font-size: 1.4rem;
+                            padding: 0.5rem 0.7rem;
+                            color: white;
+                            border-radius: 0.5rem;
+                        }
+
+                    }
+
+                    .image {
+                        position: relative;
+                        height: 250px;
+                        width: 250px;
+                        border-radius: 50%;
+                        background-color: rgb(236, 234, 234);
+                        overflow: hidden;
+                        margin: 0 auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+
+
+                        img {
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: block;
+                            position: absolute;
+                            height: 200px;
+                        }
+                    }
+
+                    &>p {
+                        font-size: 1.4rem;
+                        text-align: center;
+                        color: white;
+                        font-weight: 600;
+                        margin-top: 1rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    header #heroCarousel {
+        .carousel-inner .carousel-item {
+            position: relative;
+            background-position: right;
+            color: white;
+           
+            .carousel-caption {
+                padding-left: 5rem;
+        
+                h1 {
+                    font-size: 2rem;
+                    color:#FF6F61;
+                }
+        
+            }
+        }
+    }
+}
+
+  
+@media (max-width:575px) {
+    body{
+        background-color: red;
+    }
+    .swiper {
+        width: 250px;
+    }
+}

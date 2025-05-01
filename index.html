@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+
+  <!-- Custom Styling for Indicator Dots -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- <div class="top-header">
+      <h1>This is a header</h1>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="/images/logo2.png" alt="Logo" style="height: 50px;">
+        </a>
+
+        <!-- Navbar Toggle for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasNavbarLabel">Navbar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex gap-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators (Dots) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner ">
+        <div class="carousel-item active" style="background-image: url('/images/slider1.png');">
+          <div class="carousel-caption">
+            <p>Weekend Discount</p>
+            <h1>Shopping with us<br>
+              for better quality and the<br>
+              best price</h1>
+            <p>We have prepared special discounts for you on grocery products. <br>
+              Don't miss these opportunities...</p>
+            <div class="button d-flex gap-3 align-items-center">
+              <div class="discount d-flex align-items-center gap-2 mt-1">
+                <h4 class="text-success">$27</h4>
+                <h5 class="text-danger"><s>$21</s></h5>
+              </div>
+              <a href="#" class="btn-purple text-light">Shop Now</a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item" style="background-image: url('/images/slider2.png');">
+          <div class="carousel-caption">
+            <p>Weekend Discount</p>
+            <h1>Get the best quality <br>
+              products at the lowest <br>
+              prices</h1>
+            <p>We have prepared special discounts for you on organic breakfast <br>
+              products.</p>
+            <div class="button d-flex gap-3 align-items-center">
+              <div class="discount d-flex align-items-center gap-2 mt-1">
+                <h4 class="text-success">$21</h4>
+                <h5 class="text-danger"><s>$59</s></h5>
+              </div>
+              <a href="#" class="btn-purple text-light">Shop Now</a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item" style="background-image: url('/images/slider3.png');">
+          <div class="carousel-caption">
+            <p>Weekend Discount</p>
+            <h1>Bringing you the best products <br> with the best deals, <br> every day made better.</h1>
+            <p>We have prepared special discounts for you on grocery <br>
+              products. Don't miss these opportunities...</p>
+            <div class="button d-flex gap-3 align-items-center">
+              <div class="discount d-flex align-items-center gap-2 mt-1">
+                <h4 class="text-success">$27.99</h4>
+                <h5 class="text-danger"><s>$56</s></h5>
+              </div>
+              <a href="#" class="btn-purple text-light">Shop Now</a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+  <section class="top-products">
+    <div class="container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>10%</p>
+              </div>
+              <div class="image">
+                <img src="/images/chips2.png" alt="" style="height: 200px;">
+              </div>
+              <p>Lays Chips</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>12%</p>
+              </div>
+              <div class="image">
+                <img src="/images/banana.png" alt="" style="height: 200px;">
+              </div>
+              <p>Banana</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>15%</p>
+              </div>
+              <div class="image">
+                <img src="/images/apple-juice.png" alt="" style="height: 200px;">
+              </div>
+              <p>Apple Juice</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>18%</p>
+              </div>
+              <div class="image">
+                <img src="/images/strawberry.png" alt="" style="height: 200px;">
+              </div>
+              <p>Strawberry Cream</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>11%</p>
+              </div>
+              <div class="image">
+                <img src="/images/frozen-pizza.png" alt="" style="height: 200px;">
+              </div>
+              <p>Frozen Pizza</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>5%</p>
+              </div>
+              <div class="image">
+                <img src="/images/prime.png" alt="" style="height: 200px;">
+              </div>
+              <p>Prime Electrolyte Drink</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>22%</p>
+              </div>
+              <div class="image">
+                <img src="/images/frozen-meat.png" alt="" style="height: 200px;">
+              </div>
+              <p>Steaks</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>6%</p>
+              </div>
+              <div class="image">
+                <img src="/images/protein-shake.png" alt="" style="height: 200px;">
+              </div>
+              <p>Protein Shake</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>4%</p>
+              </div>
+              <div class="image">
+                <img src="/images/beer-soda.png" alt="" style="height: 200px;">
+              </div>
+              <p>Cafeen Free Beer Soda</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="discount">
+                <p>13%</p>
+              </div>
+              <div class="image">
+                <img src="/images/mouthwash.png" alt="" style="height: 200px;">
+              </div>
+              <p>Mouthwash</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination "></div>
+
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+    </div>
+  </section>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
