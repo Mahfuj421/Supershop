@@ -22,8 +22,6 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    // when window width is >= 320px
-    // when window width is >= 576px
     575: {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -49,3 +47,53 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+function getNextTargetDate() {
+  const now = new Date();
+  const currentDate = now.getDate();
+  const currentMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+
+  let targetDay;
+  let targetMonth = currentMonth;
+  let targetYear = currentYear;
+
+  if (currentDate < 15) {
+    targetDay = 15;
+  } else if (currentDate >= 15 && currentDate < 30) {
+    targetDay = 30;
+  } else {
+    targetDay = 15;
+    targetMonth += 1;
+    if (targetMonth > 11) {
+      targetMonth = 0;
+      targetYear += 1;
+    }
+  }
+
+  return new Date(targetYear, targetMonth, targetDay, 0, 0, 0);
+}
+
+function updateTimer() {
+  const now = new Date();
+  const targetDate = getNextTargetDate();
+  const timeDiff = targetDate - now;
+
+  if (timeDiff <= 0) {
+    setTimeout(updateTimer, 1000);
+    return;
+  }
+
+  const seconds = Math.floor((timeDiff / 1000) % 60);
+  const minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+  const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+  document.querySelector(".day-val").textContent = String(days).padStart(2, "0");
+  document.querySelector(".hour-val").textContent = String(hours).padStart(2, "0");
+  document.querySelector(".minute-val").textContent = String(minutes).padStart(2, "0");
+  document.querySelector(".second-val").textContent = String(seconds).padStart(2, "0");
+}
+
+setInterval(updateTimer, 1000);
+updateTimer(); // initial call
